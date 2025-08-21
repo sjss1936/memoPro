@@ -1,0 +1,352 @@
+:root {
+  /* Light Mode Colors (Notion-like) */
+  --text-color: #37352f;
+  --bg-color: #ffffff;
+  --card-bg: #ffffff;
+  --card-border: #eaeaea;
+  --input-border: #e0e0e0;
+  --btn-ghost-bg: #f9f9f9;
+  --btn-ghost-hover-bg: #f0f0f0;
+  --meta-color: #9b9a97;
+  --link-color: #2563eb;
+  --focus-ring-color: rgba(99,102,241,.12);
+}
+
+body.dark-mode {
+  /* Dark Mode Colors (Notion-like) */
+  --text-color: #f5f5f5;
+  --bg-color: #1e1e1e;
+  --card-bg: #2a2a2a;
+  --card-border: #3a3a3a;
+  --input-border: #3a3a3a;
+  --btn-ghost-bg: #3a3a3a;
+  --btn-ghost-hover-bg: #4a4a4a;
+  --meta-color: #a0a0a0;
+  --link-color: #90caf9;
+  --focus-ring-color: rgba(99,102,241,.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--text-color);
+  background: var(--bg-color);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 960px; /* Wider content area */
+  margin: 40px auto; /* Centralized */
+  padding: 0 24px; /* More horizontal padding */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px; /* Match container padding */
+  margin-bottom: 24px;
+  position: sticky;
+  top: 0;
+  background: var(--bg-color); /* Ensure header background changes with theme */
+  z-index: 100;
+  border-bottom: 1px solid var(--card-border); /* Subtle separator */
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700; /* Bold title */
+  color: var(--text-color);
+}
+
+.header .row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+:root {
+  /* Light Mode Colors (Notion-like) */
+  --text-color: #37352f;
+  --bg-color: #ffffff;
+  --card-bg: #ffffff;
+  --card-border: #eaeaea;
+  --input-border: #e0e0e0;
+  --btn-ghost-bg: #f9f9f9;
+  --btn-ghost-hover-bg: #f0f0f0;
+  --meta-color: #9b9a97;
+  --link-color: #2563eb;
+  --focus-ring-color: rgba(99,102,241,.12);
+}
+
+body.dark-mode {
+  /* Dark Mode Colors (Notion-like) */
+  --text-color: #f5f5f5;
+  --bg-color: #1e1e1e;
+  --card-bg: #2a2a2a;
+  --card-border: #3a3a3a;
+  --input-border: #3a3a3a;
+  --btn-ghost-bg: #3a3a3a;
+  --btn-ghost-hover-bg: #4a4a4a;
+  --meta-color: #a0a0a0;
+  --link-color: #90caf9;
+  --focus-ring-color: rgba(99,102,241,.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--text-color);
+  background: var(--bg-color);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 960px; /* Wider content area */
+  margin: 40px auto; /* Centralized */
+  padding: 0 24px; /* More horizontal padding */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Revert to space-between */
+  /* Removed gap: 24px; */
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  position: sticky;
+  top: 0;
+  background: var(--bg-color);
+  z-index: 100;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-color);
+  flex-shrink: 0; /* Prevent h1 from shrinking */
+}
+
+/* Removed .header-search-input block */
+
+.header-buttons-right {
+  display: flex;
+  gap: 12px; /* Gap between buttons */
+  align-items: center;
+  flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px 12px; /* Slightly less padding */
+  border: 1px solid var(--input-border); /* Flat border */
+  border-radius: 6px; /* Rounded corners */
+  outline: none;
+  background: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: none; /* Remove shadow */
+  font-size: 16px;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #6366f1; /* Focus color */
+  box-shadow: 0 0 0 2px var(--focus-ring-color); /* Subtle focus ring */
+}
+
+.btn {
+  border: 1px solid var(--input-border); /* Flat border */
+  padding: 10px 14px;
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease;
+  box-shadow: none; /* Remove shadow */
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  min-height: 40px; /* Ensure a consistent minimum height */
+  line-height: 1; /* Normalize line height for better vertical centering */
+}
+
+.btn.primary {
+  background: #6366f1;
+  color: #fff;
+  border-color: #6366f1;
+}
+
+.btn.primary:hover {
+  background: #5356d1;
+}
+
+.btn.ghost {
+  background: var(--btn-ghost-bg);
+  color: var(--text-color);
+}
+
+.btn.ghost:hover {
+  background: var(--btn-ghost-hover-bg);
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border); /* Notion block border */
+  border-radius: 6px; /* Notion block rounded corners */
+  padding: 16px;
+  box-shadow: none; /* Remove shadow */
+  transition: background 0.2s ease;
+}
+
+.card:hover {
+  background: var(--btn-ghost-bg); /* Subtle hover effect */
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.meta {
+  color: var(--meta-color);
+  font-size: 13px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Slightly wider cards */
+  gap: 16px; /* More space between cards */
+}
+
+/* Specific adjustments for NoteCard content */
+.card h3 {
+  font-weight: 600; /* Slightly bolder for card titles */
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-weight: 400; /* Light for body text */
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.card .meta {
+  font-size: 12px; /* Smaller meta text */
+}
+
+
+input:focus, textarea:focus, select:focus {
+  border-color: #6366f1; /* Focus color */
+  box-shadow: 0 0 0 2px var(--focus-ring-color); /* Subtle focus ring */
+}
+
+.btn {
+  border: 1px solid var(--input-border); /* Flat border */
+  padding: 10px 14px;
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease;
+  box-shadow: none; /* Remove shadow */
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  min-height: 40px; /* Ensure a consistent minimum height */
+  line-height: 1; /* Normalize line height for better vertical centering */
+}
+
+.btn.primary {
+  background: #6366f1;
+  color: #fff;
+  border-color: #6366f1;
+}
+
+.btn.primary:hover {
+  background: #5356d1;
+}
+
+.btn.ghost {
+  background: var(--btn-ghost-bg);
+  color: var(--text-color);
+}
+
+.btn.ghost:hover {
+  background: var(--btn-ghost-hover-bg);
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border); /* Notion block border */
+  border-radius: 6px; /* Notion block rounded corners */
+  padding: 16px;
+  box-shadow: none; /* Remove shadow */
+  transition: background 0.2s ease;
+}
+
+.card:hover {
+  background: var(--btn-ghost-bg); /* Subtle hover effect */
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.meta {
+  color: var(--meta-color);
+  font-size: 13px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Slightly wider cards */
+  gap: 16px; /* More space between cards */
+}
+
+/* Specific adjustments for NoteCard content */
+.card h3 {
+  font-weight: 600; /* Slightly bolder for card titles */
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-weight: 400; /* Light for body text */
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.card .meta {
+  font-size: 12px; /* Smaller meta text */
+}
